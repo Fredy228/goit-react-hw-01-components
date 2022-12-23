@@ -28,7 +28,6 @@ export const Item = styled.li`
     padding: 15px 0;
     color: white;
     background-color: ${props => {  
-        console.log(props)
         switch (props.data) {
             case '.docx':
                 return 'green'
