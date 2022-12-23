@@ -1,9 +1,7 @@
 import styled from '@emotion/styled'
 
-export const Profle = styled.div`
-    background-color: #00000010;
-    padding: 15px;
-`;
+export const Profle = styled.div``;
+
 export const Description = styled.div`
     text-align: center;
     background-color: #fff;
@@ -11,14 +9,17 @@ export const Description = styled.div`
     margin: 0 auto;
     padding: 15px;
 `;
+
 export const Avatar = styled.img`
     width: 120px;
     height: auto;
 `;
+
 export const Name = styled.p`
     font-weight: bold;
     font-size: 24px;
 `;
+
 export const Text = styled.p`
     color: #0000009b;
 `;
