@@ -1,14 +1,5 @@
 import styled from '@emotion/styled';
 
-export const FriendList = styled.ul`
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-`;
-
 export const Item = styled.li`
     display: flex;
     align-items: center;
@@ -37,8 +28,10 @@ export const Status = styled.span`
 export const Avatar = styled.img`
     width: 50px;
     height: auto;
+    margin-left: 5px;
 `;
 
 export const Name = styled.p`
-    
+    font-size: 20px;
+    margin-left: 5px;
 `;

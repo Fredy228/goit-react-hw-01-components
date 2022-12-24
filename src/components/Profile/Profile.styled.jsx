@@ -1,6 +1,8 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
-export const Profle = styled.div``;
+export const ProfileBox = styled.div`
+    width: 100%;
+`;
 
 export const Description = styled.div`
     text-align: center;
