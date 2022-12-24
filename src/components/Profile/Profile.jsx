@@ -2,8 +2,9 @@ import {ProfileBox, Description, Avatar, Name, Text, Stats, StatsItem, Label, Qu
 import PropTypes from 'prop-types';
 
 export const Profile = ({username, avatar, tag, location, stats}) => {
-    return (<ProfileBox>
-        <Description key={username}>
+    return (
+    <ProfileBox>
+        <Description>
             <Avatar src={avatar}/>
             <Name>{username}</Name>
             <Text>{tag}</Text>
@@ -19,7 +20,8 @@ export const Profile = ({username, avatar, tag, location, stats}) => {
                 )
             })}
         </Stats>
-    </ProfileBox>)
+    </ProfileBox>
+    )
 }
 
 Profile.propTypes = {

@@ -1,12 +1,13 @@
 import {Container} from './App.styled';
 import {Profile} from '../Profile/Profile';
-import {Statistic} from '../Statistics/Statistics';
+import {Statistic} from '../Statistics/StatList/Statistics';
 import {Friends} from '../Friend/FriendList/FriendList';
 import {TransactionHistory} from '../TransactionHistory/TransactionHistory';
 
 import user from '../Profile/user.json';
 import data from '../Statistics/data.json';
 import friends from '../Friend/friends.json';
+import transactions from '../TransactionHistory/transactions.json'
 
 export const App = () => {
   return (
@@ -22,7 +23,7 @@ export const App = () => {
 
       <Friends friends={friends}/>
 
-      <TransactionHistory/>
+      <TransactionHistory transactions={transactions}/>
     </Container>
   );
 };

@@ -1,7 +1,8 @@
-import {TransactionHistoryBox, Thead, Tbody, HeadTr, HeadTh, BodyTr, BodyTh} from './TransactionHistory.styled';
-import transactions from './transactions.json'
+import {TransactionHistoryBox, Thead, Tbody, HeadTr, HeadTh} from './TransactionHistory.styled';
+import {TransactionList} from './TransactionList/TransactionLIst';
+import PropTypes from 'prop-types';
 
-export const TransactionHistory = () => {
+export const TransactionHistory = ({transactions}) => {
     return (
         <TransactionHistoryBox>
             <Thead>
@@ -12,16 +13,16 @@ export const TransactionHistory = () => {
                 </HeadTr>
             </Thead>
             <Tbody>
-                {transactions.map(item => {
+                {transactions.map(({id, type, amount, currency}) => {
                     return (
-                        <BodyTr key={item.id}>
-                            <BodyTh>{item.type}</BodyTh>
-                            <BodyTh>{item.amount}</BodyTh>
-                            <BodyTh>{item.currency}</BodyTh>
-                        </BodyTr>
+                        <TransactionList key={id} type={type} amount={amount} currency={currency}/>
                     )
                 })}
             </Tbody>
         </TransactionHistoryBox>
     )
+}
+
+TransactionHistory.propTypes = {
+    transactions: PropTypes.arrayOf(PropTypes.object).isRequired
 }
