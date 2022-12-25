@@ -2,10 +2,10 @@ import {Statistics, Title, StatList} from '../StatList/Statistics.styled';
 import {StatItem} from '../StatItem/StatItem'
 import PropTypes from 'prop-types';
 
-export const Statistic = ({data}) => {
+export const Statistic = ({data, title}) => {
     return (
         <Statistics>
-            {true && (<Title>Upload stats</Title>)}
+            {title && (<Title>{title}</Title>)}
             <StatList>
                 {data.map(({id, label, percentage}) => {
                     return (
@@ -18,5 +18,5 @@ export const Statistic = ({data}) => {
 }
 
 Statistic.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.object)
+    data: PropTypes.arrayOf(PropTypes.object).isRequired
 }
